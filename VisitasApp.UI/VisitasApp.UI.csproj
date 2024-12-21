@@ -9,7 +9,6 @@
   <ItemGroup>
     <Content Remove="Views\Home\Error.cshtml" />
     <Content Remove="Views\Visitas\Delete.cshtml" />
-    <Content Remove="Views\Visitas\Edit.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
