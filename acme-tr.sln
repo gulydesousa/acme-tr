@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1897CEBA-9EAE-4E3A-936E-2DA4323FEA00}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitasApp.Api", "VisitasApp.Api\VisitasApp.Api.csproj", "{0680C0BE-B5D2-4E0F-A5B0-BFE38212A3BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitasApp.Core", "VisitasApp.Core\VisitasApp.Core.csproj", "{281D071E-F785-4116-A0A3-9523A48B8591}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitasApp.Infrastructure", "VisitasApp.Infrastructure\VisitasApp.Infrastructure.csproj", "{AD6B3A98-F76D-48CC-AA93-565EEA6E951D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitasApp.UI", "VisitasApp.UI\VisitasApp.UI.csproj", "{A9E62CF2-7095-4E49-AFC2-FC946C552DE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{965310A0-8115-4CAC-B68A-ADDD236D44DF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitasApp.Tests", "VisitasApp.Tests\VisitasApp.Tests.csproj", "{C35FB59C-8840-41DE-A9EF-87FAE39419F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D1A5A1E0-5A5A-4E5A-8A5A-5A5A5A5A5A5A}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0680C0BE-B5D2-4E0F-A5B0-BFE38212A3BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0680C0BE-B5D2-4E0F-A5B0-BFE38212A3BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0680C0BE-B5D2-4E0F-A5B0-BFE38212A3BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0680C0BE-B5D2-4E0F-A5B0-BFE38212A3BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{281D071E-F785-4116-A0A3-9523A48B8591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{281D071E-F785-4116-A0A3-9523A48B8591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{281D071E-F785-4116-A0A3-9523A48B8591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{281D071E-F785-4116-A0A3-9523A48B8591}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD6B3A98-F76D-48CC-AA93-565EEA6E951D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD6B3A98-F76D-48CC-AA93-565EEA6E951D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD6B3A98-F76D-48CC-AA93-565EEA6E951D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD6B3A98-F76D-48CC-AA93-565EEA6E951D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9E62CF2-7095-4E49-AFC2-FC946C552DE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9E62CF2-7095-4E49-AFC2-FC946C552DE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9E62CF2-7095-4E49-AFC2-FC946C552DE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9E62CF2-7095-4E49-AFC2-FC946C552DE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C35FB59C-8840-41DE-A9EF-87FAE39419F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C35FB59C-8840-41DE-A9EF-87FAE39419F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C35FB59C-8840-41DE-A9EF-87FAE39419F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C35FB59C-8840-41DE-A9EF-87FAE39419F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0680C0BE-B5D2-4E0F-A5B0-BFE38212A3BD} = {1897CEBA-9EAE-4E3A-936E-2DA4323FEA00}
+		{281D071E-F785-4116-A0A3-9523A48B8591} = {1897CEBA-9EAE-4E3A-936E-2DA4323FEA00}
+		{AD6B3A98-F76D-48CC-AA93-565EEA6E951D} = {1897CEBA-9EAE-4E3A-936E-2DA4323FEA00}
+		{A9E62CF2-7095-4E49-AFC2-FC946C552DE3} = {1897CEBA-9EAE-4E3A-936E-2DA4323FEA00}
+		{C35FB59C-8840-41DE-A9EF-87FAE39419F6} = {965310A0-8115-4CAC-B68A-ADDD236D44DF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {07C9091E-0BC7-4FEF-950F-212078199918}
+	EndGlobalSection
+EndGlobal

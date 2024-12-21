@@ -26,5 +26,12 @@ Donde se pueda visualizar, añadir, editar y eliminar:
 
 A continuación vamos paso a paso para construir la solucion.
 
+#### 1. Estructura de la solución
+
+- ***VisitasApp.Api:*** Proyecto de la API para la operaciones CRUD
+- ***VisitasApp.Core:*** Proyecto de la capa de dominio
+- ***VisitasApp.Infrastructure:*** Proyecto de la capa de acceso a datos
+- ***VisitasApp.UI:*** Proyecto de la capa de presentación
+
 
 
