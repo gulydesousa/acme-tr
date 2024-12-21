@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VisitasApp.Infrastructure.Data;
 
@@ -11,9 +12,11 @@ using VisitasApp.Infrastructure.Data;
 namespace VisitasApp.Infrastructure.Migrations
 {
     [DbContext(typeof(VisitasDbContext))]
-    partial class VisitasDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241221194347_YourMigrationName")]
+    partial class YourMigrationName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
