@@ -25,13 +25,14 @@ Donde se pueda visualizar, añadir, editar y eliminar:
 - Pruebas Unitarias xUnit
 
 A continuación vamos paso a paso para construir la solucion.
-
+-----
 #### 1. Estructura de la solución
 
 - ***VisitasApp.Api:*** Proyecto de la API para la operaciones CRUD
 - ***VisitasApp.Core:*** Proyecto de la capa de dominio
 - ***VisitasApp.Infrastructure:*** Proyecto de la capa de acceso a datos
 - ***VisitasApp.UI:*** Proyecto de la capa de presentación
+----
 
 #### 2. Crear la base de datos usando EF *model first*
 
@@ -50,8 +51,11 @@ A continuación vamos paso a paso para construir la solucion.
 dotnet ef database update -p VisitasApp.Infrastructure -s VisitasApp.Api
 ```
 
+-----
 
+#### 3. Crear .NET API para las operaciones CRUD
 
+> **Ruta de la API:**  *http://localhost:5020*
 
-
+<img src="readme_images/Swagger.png" alt="Swagger" width="40%">
 

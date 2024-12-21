@@ -1,5 +1,8 @@
 using VisitasApp.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using VisitasApp.Core.Domain.RepositoryContracts;
+using VisitasApp.Infrastructure.Repositories;
+using VisitasApp.Core.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,9 +13,20 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<VisitasDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// Register the repository
+builder.Services.AddScoped<IVisitaRepository, VisitaRepository>();
+// Register the DbContext
+builder.Services.AddScoped<IVisitasDbContext, VisitasDbContext>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+//Habilitar anotaciones Swagger
+builder.Services.AddSwaggerGen(c =>
+{
+    c.EnableAnnotations();
+});
+
 
 var app = builder.Build();
 
