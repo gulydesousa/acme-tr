@@ -32,6 +32,7 @@ A continuación vamos paso a paso para construir la solucion.
 - ***VisitasApp.Core:*** Proyecto de la capa de dominio
 - ***VisitasApp.Infrastructure:*** Proyecto de la capa de acceso a datos
 - ***VisitasApp.UI:*** Proyecto de la capa de presentación
+- - ***VisitasApp.Test:*** Proyecto de pruebas unitarias
 ----
 
 #### 2. Crear la base de datos usando EF *model first*
@@ -57,5 +58,15 @@ dotnet ef database update -p VisitasApp.Infrastructure -s VisitasApp.Api
 
 > **Ruta de la API:**  *http://localhost:5020*
 
-<img src="readme_images/Swagger.png" alt="Swagger" width="40%">
+> <img src="readme_images/Swagger.png" alt="Swagger" width="40%">
+
+-----
+#### 4. Pruebas unitarias
+
+- **VisitasDbContextTest:** Proporciona una **capa de abstracción** para interactuar con la base de datos en pruebas unitarias, permitiendo realizar operaciones CRUD en la tabla **Visitas**.
+- **VisitasControllerTest:** Pruebas unitarias para el controlador de la API.
+- **VisitasRepositoryTest:** Pruebas unitarias para el repositorio de la API.
+
+> <img src="readme_images/Tests.png" alt="xUnit" width="40%">
+
 
