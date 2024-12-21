@@ -38,11 +38,11 @@ namespace VisitasApp.UI.Controllers
 
         [Route("[action]")]
         [HttpPost]
-        public IActionResult Create(CreateVisitaDto visita)
+        public async Task<IActionResult> Create(CreateVisitaDto visita)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                _visitasService.VisitasCreateAsync(visita);
+                await _visitasService.VisitasCreateAsync(visita);
                 return RedirectToAction("Index", "Visitas");
             }
             else

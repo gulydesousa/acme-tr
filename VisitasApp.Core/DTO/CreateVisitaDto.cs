@@ -19,7 +19,18 @@ namespace VisitasApp.Core.DTO
         public string NombreVendedor { get; set; } = "";
 
         [StringLength(500)]
-        public string? Notas { get; set; } = "";
+        private string _notas = "";
+        public string? Notas
+        {
+            get
+            {
+                return _notas ?? "";
+            }
+            set
+            {
+                _notas = value ?? "";
+            }
+        }
 
         public static ValidationResult ValidateFechaVisita(DateTime fechaVisita, ValidationContext context)
         {

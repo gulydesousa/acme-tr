@@ -22,7 +22,19 @@ namespace VisitasApp.Core.Domain.Entities
         [Required(ErrorMessage = "El vendedor es requerido")]
         public string NombreVendedor { get; set; } = "";
 
+
         [StringLength(500)]
-        public string Notas { get; set; } = "";
+        private string _notas = "";
+        public string? Notas
+        {
+            get
+            {
+                return _notas ?? "";
+            }
+            set
+            {
+                _notas = value ?? "";
+            }
+        }
     }
 }
