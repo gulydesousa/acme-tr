@@ -67,7 +67,7 @@ dotnet ef database update -p VisitasApp.Infrastructure -s VisitasApp.Api
 - **VisitasControllerTest:** Pruebas unitarias para el controlador de la API.
 - **VisitasRepositoryTest:** Pruebas unitarias para el repositorio de la API.
 
-> <img src="readme_images/Tests.png" alt="xUnit" width="40%">
+> <img src="readme_images/tests.png" alt="xUnit" width="40%">
 
 
 -----
