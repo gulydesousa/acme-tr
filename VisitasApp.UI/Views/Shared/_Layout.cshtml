@@ -12,22 +12,40 @@
 <body>
     @*Contenedor para toda la pagina*@
     <div class="container">
-
-        @*Contenedor para la barra de navegacion*@
-        <div class="navbar mb">
-            <div class="navbar-brand">ACME: Visitas</div>
-            <ul>
-                <li>
-                    <a href="~/Visitas/index"></a>
-                </li>
-            </ul>
-        </div>
-
-
-        @*Contenido de la pagina*@
         <div class="page-content">
-            @RenderBody()
+            <div class="margin-bottom">
+                <div class="flex" id="top-bar-div">
+                    <div class="flex-1" id="app-title-div">
+                        <h1 class="app-title">
+                            <i class="fa-solid fa-people-simple">
+                                A C M E  -  V i s i t a s ✏
+                            </i>
+                        </h1>
+                    </div>                    
+                </div>
+
+            </div>
+
+            @*Contenedor para la barra de navegacion*@
+            <div class="navbar mb">
+                <ul>
+                    <li>
+                        <a href="~/visitas/index">Visitas</a>                        
+                    </li>
+                    <li>
+                        <a href="~/visitas/create">Registrar Visita</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            @*Contenido de la pagina*@
+            <div class="body">
+                @RenderBody()
+            </div>
         </div>
     </div>
+
+    @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -1,4 +1,5 @@
 ﻿using VisitasApp.Core.Domain.Entities;
+using VisitasApp.Core.DTO;
 
 namespace VisitasApp.Core.ServicesContract
 {
@@ -6,7 +7,7 @@ namespace VisitasApp.Core.ServicesContract
     {
         Task<IEnumerable<Visita>> VisitasGetAllAsync();
         Task<Visita> VisitasGetByIdAsync(int id);
-        Task<Visita> VisitasCreateAsync(Visita visita);
+        Task<Visita> VisitasCreateAsync(CreateVisitaDto visita);
         Task VisitasUpdateAsync(Visita visita);
         Task VisitasDeleteAsync(int id);
     }

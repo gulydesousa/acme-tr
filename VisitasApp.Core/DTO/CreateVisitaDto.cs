@@ -12,12 +12,22 @@ namespace VisitasApp.Core.DTO
         public string NombreCliente { get; set; } = "";
 
         [Required(ErrorMessage = "La fecha de la visita es requerida")]
+        [CustomValidation(typeof(CreateVisitaDto), "ValidateFechaVisita")]
         public DateTime FechaVisita { get; set; }
 
         [Required(ErrorMessage = "El vendedor es requerido")]
         public string NombreVendedor { get; set; } = "";
 
         [StringLength(500)]
-        public string Notas { get; set; } = "";
+        public string? Notas { get; set; } = "";
+
+        public static ValidationResult ValidateFechaVisita(DateTime fechaVisita, ValidationContext context)
+        {
+            if (fechaVisita > DateTime.Now.AddMinutes(1))
+            {
+                return new ValidationResult("La fecha de la visita no puede ser posterior a la fecha actual.");
+            }
+            return ValidationResult.Success!;
+        }
     }
 }

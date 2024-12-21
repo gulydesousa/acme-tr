@@ -1,6 +1,7 @@
 ﻿using System.Net.Http.Json;
 using System.Text.Json;
 using VisitasApp.Core.Domain.Entities;
+using VisitasApp.Core.DTO;
 using VisitasApp.Core.ServicesContract;
 
 namespace VisitasApp.Core.Services
@@ -59,7 +60,7 @@ namespace VisitasApp.Core.Services
             }
         }
 
-        public async Task<Visita> VisitasCreateAsync(Visita visita)
+        public async Task<Visita> VisitasCreateAsync(CreateVisitaDto visita)
         {
             try
             {
