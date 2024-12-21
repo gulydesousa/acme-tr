@@ -73,14 +73,41 @@ dotnet ef database update -p VisitasApp.Infrastructure -s VisitasApp.Api
 -----
 ## Iniciar la aplicación
 
-1. Descargar el repositorio
-2. Configurar la conexion al servidor sql en la API `visitasApp.Api\appsettings.json`
-3. Ejecutar la migración 
+1. **Descargar** el repositorio 
+> 💾 **[https://github.com/gulydesousa/acme-tr](https://github.com/gulydesousa/acme-tr)**
+
+2. **Configurar** la conexion al servidor sql en la API 
+> 👨‍💻`visitasApp.Api\appsettings.json`
+
+3. **Ejecutar la migración** de *Base de Datos* desde el directorio de la solución
+> 🛢 Modelo de datos
 ```bash
 dotnet ef database update -p VisitasApp.Infrastructure -s VisitasApp.Api
 ```
-4. Asegurarse que la solución tiene la opcion **Multiple Start Up Projects** con estos dos proyectos seleccionados: `VisitasApp.Api`, `VisitasApp.UI`
-5. Arrancar la solución
+4. Al arrancar la solución se inicia la web y la api simultaneamente  
+> ⚙Asegurarse que la solución tiene la opcion **Multiple Start Up Projects** con estos dos proyectos seleccionados: `VisitasApp.Api`, `VisitasApp.UI`
+
+<style>
+table td {
+    vertical-align: top;
+}
+</style>
+<table>
+<tr>
+<td>Index<br>
+<img src="readme_images/Index.png" alt="" ></td>
+<td>Create</br>
+<img src="readme_images/Create.png" alt="" ></td>
+</tr>
+<tr>
+<td>Edit</br>
+<img src="readme_images/Edit.png" alt="" width="60%"></td>
+<td>Delete</br>
+<img src="readme_images/Delete.png" alt=""></td>
+</tr>
+</table>
+
+
 
 
 
