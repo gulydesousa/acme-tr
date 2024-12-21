@@ -1,0 +1,7 @@
+﻿CREATE PROCEDURE Visitas_GetById
+    @Id INT
+AS
+BEGIN
+    SELECT * FROM Visitas WHERE Id = @Id;
+END;
+GO

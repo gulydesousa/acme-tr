@@ -33,5 +33,25 @@ A continuación vamos paso a paso para construir la solucion.
 - ***VisitasApp.Infrastructure:*** Proyecto de la capa de acceso a datos
 - ***VisitasApp.UI:*** Proyecto de la capa de presentación
 
+#### 2. Crear la base de datos usando EF *model first*
+
+- **VisitasApp.Infrastructure\TSqlScripts**: Directorio para los SPs que entran en la migración
+- **VisitasApp.Infrastructure\Migrations**: Directorio para las migraciones
+
+> #### Conexión de la base de datos 
+```json
+"ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=VisitasAppDb;Trusted_Connection=True;MultipleActiveResultSets=true"
+  },
+```
+
+> #### Comando para ejecutar la migración
+```bash
+dotnet ef database update -p VisitasApp.Infrastructure -s VisitasApp.Api
+```
+
+
+
+
 
 

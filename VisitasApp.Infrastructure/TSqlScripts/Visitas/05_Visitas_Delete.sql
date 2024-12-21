@@ -1,0 +1,7 @@
+﻿CREATE PROCEDURE Visitas_Delete
+    @Id INT
+AS
+BEGIN
+    DELETE FROM Visitas WHERE Id = @Id;
+END;
+GO
