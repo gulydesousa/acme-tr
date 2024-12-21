@@ -7,10 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <Content Remove="Views\Home\Error.cshtml" />
+    <Content Remove="Views\Visitas\Create.cshtml" />
+    <Content Remove="Views\Visitas\Delete.cshtml" />
+    <Content Remove="Views\Visitas\Edit.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Views\Home\" />
-    <Folder Include="Views\Shared\" />
-    <Folder Include="Views\Visitas\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VisitasApp.Core\VisitasApp.Core.csproj" />
   </ItemGroup>
 
 </Project>

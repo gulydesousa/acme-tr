@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Visita>
+
+@{
+    ViewBag.Title = "Visitas";
+}
+
+<h1>Visitas</h1>
+
+<table class="table w-100 mt">
+    <thead>
+        <tr>
+            <th>Nombre Cliente</th>
+            <th>Fecha Visita</th>
+            <th>Nombre Vendedor</th>
+            <th>Notas</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var visita in Model)
+        {
+            <tr>
+                <td><b>@visita.NombreCliente</b></td>
+                <td>@visita.FechaVisita.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>@visita.NombreVendedor</td>
+                <td><i>@visita.Notas</i></td>                
+            </tr>
+        }
+    </tbody>
+</table>

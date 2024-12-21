@@ -70,3 +70,17 @@ dotnet ef database update -p VisitasApp.Infrastructure -s VisitasApp.Api
 > <img src="readme_images/Tests.png" alt="xUnit" width="40%">
 
 
+-----
+## Iniciar la aplicación
+
+1. Descargar el repositorio
+2. Configurar la conexion al servidor sql en la API `visitasApp.Api\appsettings.json`
+3. Ejecutar la migración 
+```bash
+dotnet ef database update -p VisitasApp.Infrastructure -s VisitasApp.Api
+```
+4. Asegurarse que la solución tiene la opcion **Multiple Start Up Projects** con estos dos proyectos seleccionados: `VisitasApp.Api`, `VisitasApp.UI`
+5. Arrancar la solución
+
+
+
