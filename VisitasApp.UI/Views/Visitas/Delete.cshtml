@@ -1,78 +1,93 @@
 ﻿@using System.ComponentModel.DataAnnotations;
-@using ServiceContracts.DTO;
-
-@model PersonResponse;
+@using VisitasApp.Core.Domain.Entities;
 @{
-    ViewBag.Title = "Delete Person";
+    ViewBag.Title = "Borrar Visita";
 }
-
+@model VisitasApp.Core.Domain.Entities.Visita
 @*Bread Crumbs*@
 <div class="flex">
     <div class="flex-1">
-        <span class="text-grey">Contacts</span>
+        <span class="text-grey">Visitas</span>
         <i class="text-grey fa-padding fa-solid fa-caret-right"></i>
-        <span class="text-grey">Persons</span>
-        <i class="text-grey fa-padding fa-solid fa-caret-right"></i>
-        <span class="text-grey">Delete</span>
+        <span class="text-grey">Borrar</span>
     </div>
 </div>
 
 
-
-
 <div class="form-container">
+    <a asp-controller="Visitas" asp-action="Index" class="link-hover">Listado de visitas</a>
+    <h2 class="text-large">Borrar Visita</h2>
+    <h4 class="text-large">¿Está seguro que quiere borrar los datos?</h4>
 
-    <a asp-controller="Persons" asp-action="Index" class="link-hover">Back to Persons List</a>
-    <h2 class="text-large">Delete Person</h2>
-    <h3>Are you sure to delete this person?</h3>
+    <form asp-controller="Visitas" asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
 
-    <form asp-controller="Persons" asp-action="Delete" method="post">
-        <input type="hidden" asp-for="PersonID" />
-
-
-        @*PersonName *@
         <div class="form-field flex">
             <div class="w-25">
-                <label asp-for="PersonName" class="form-label pt">Person Name:</label>
+                <label asp-for="NombreCliente" class="form-label pt">Nombre Cliente:</label>
             </div>
             <div class="flex-1">
-                <input class="form-input" asp-for="PersonName" readonly="readonly" />
+                <input class="form-input" asp-for="NombreCliente" readonly="readonly"/>
+                <span asp-validation-for="NombreCliente" class="text-red"></span>
             </div>
         </div>
 
-        @*Email *@
         <div class="form-field flex">
             <div class="w-25">
-                <label asp-for="Email" class="form-label pt">Email:</label>
+                <label asp-for="FechaVisita" class="form-label pt">Fecha Visita:</label>
             </div>
             <div class="flex-1">
-                <input asp-for="Email" class="form-input" readonly="readonly" />
+                <input asp-for="FechaVisita" class="form-input" asp-format="{0:yyyy-MM-dd HH:mm}" readonly="readonly" />
+                <span asp-validation-for="FechaVisita" class="text-red"></span>
+            </div>
+        </div>
+
+        <div class="form-field flex">
+            <div class="w-25">
+                <label asp-for="NombreVendedor" class="form-label pt">Nombre Vendedor:</label>
+            </div>
+            <div class="flex-1">
+                <input class="form-input" asp-for="NombreVendedor" readonly="readonly" />
+                <span asp-validation-for="NombreVendedor" class="text-red"></span>
+            </div>
+        </div>
+
+        <div class="form-field flex">
+            <div class="w-25">
+                <label asp-for="Notas" class="form-label pt">Notas:</label>
+            </div>
+            <div class="flex-1">
+                <textarea asp-for="Notas" class="form-input" readonly="readonly">@Model.Notas</textarea>
+                <span asp-validation-for="Notas" class="text-red"></span>
             </div>
         </div>
 
 
-        @*Submit *@
         <div class="form-field flex">
             <div class="w-25">
             </div>
             <div class="flex-1">
-                <button class="button button-red-back">Delete</button>
+                <button class="button button-red-back">Borrar</button>
+                <div asp-validation-summary="All" class="text-red"></div>
             </div>
         </div>
-
-        @*ViewBag.Errors*@
-        @if (ViewBag.Errors != null)
-        {
-            <div class="text-red ml">
-                <ul>
-                    @foreach (var error in ViewBag.Errors)
-                    {
-                        <li>@error</li>
-                    }
-                </ul>
-            </div>
-        }
-
     </form>
 </div>
+
+
+@section scripts {
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            asp-fallback-src="~/jquery.min.js" asp-fallback-test="windows.jQuery"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"
+            asp-fallback-src="~/jquery.validate.min.js" asp-fallback-test="windows.jQuery.validator"
+            integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"
+            asp-fallback-src="~/jquery.validate.unobtrusive.min.js" asp-fallback-test="windows.jQuery.validator"
+            integrity="sha512-xq+Vm8jC94ynOikewaQXMEkJIOBp7iArs3IhFWSWdRT3Pq8wFz46p+ZDFAR7kHnSFf+zUv52B3prRYnbDRdgog==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+}
+
 

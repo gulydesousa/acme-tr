@@ -87,5 +87,41 @@ namespace VisitasApp.UI.Controllers
                 return View(request);
             }
         }
+
+
+        [Route("[action]/{id}")]
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var visita = await _visitasService.VisitasGetByIdAsync(id);
+            if (visita == null)
+            {
+                return RedirectToAction("Index", "Visitas");
+            }
+            return View(visita);
+        }
+
+
+        [Route("[action]/{id}")]
+        [HttpPost]
+        public async Task<IActionResult> Delete(Visita visitaUpdate)
+        {
+            Visita request = await _visitasService.VisitasGetByIdAsync(visitaUpdate.Id);
+
+            if (request == null)
+            {
+                return RedirectToAction("Index", "Visitas");
+            }
+            if (ModelState.IsValid)
+            {
+                await _visitasService.VisitasDeleteAsync(visitaUpdate.Id);
+                return RedirectToAction("Index", "Visitas");
+            }
+            else
+            {
+                ViewBag.Errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
+                return View(request);
+            }
+        }
     }
 }
