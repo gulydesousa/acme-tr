@@ -87,6 +87,9 @@ dotnet ef database update -p VisitasApp.Infrastructure -s VisitasApp.Api
 4. Al arrancar la solución se inicia la web y la api simultaneamente  
 > ⚙Asegurarse que la solución tiene la opcion **Multiple Start Up Projects** con estos dos proyectos seleccionados: `VisitasApp.Api`, `VisitasApp.UI`
 
+<img src="readme_images/startup.png" alt="" >
+<br>
+
 <style>
 table td {
     vertical-align: top;
